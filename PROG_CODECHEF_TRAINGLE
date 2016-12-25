@@ -1,0 +1,47 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+using Triangle = array<int, 3>;
+
+vector<Triangle> solve(const int r)
+{
+    auto solutions = vector<Triangle>();
+
+    for (auto z = 1; z <= 4*r; z++) for (auto y = z; y*z <= 12*r*r; y++)
+    {
+        const auto s = 4*r*r*(y+z);
+        const auto t = y*z - 4*r*r;
+        if (t == 0) continue;
+
+        const auto x = s / t;
+        if (x*t != s) continue;
+
+        if (x < y) continue;
+        if ((x+y) % 2 == 0 && (y+z) % 2 == 0 && (x+z) % 2 == 0)
+        {
+            const auto a = (y+z) / 2;
+            const auto b = (x+z) / 2;
+            const auto c = (x+y) / 2;
+            solutions.push_back({a, b, c});
+        }
+    }
+
+    sort(begin(solutions), end(solutions));
+    return solutions;
+}
+
+int main()
+{
+    int r; cin >> r;
+
+    auto answer = solve(r);
+
+    cout << answer.size() << endl;
+    for (const auto t : answer)
+    {
+        for (auto i = 0; i < 3; i++)
+            cout << t[i] << " ";
+        cout << endl;
+    }
+}
+ 
