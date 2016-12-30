@@ -40,13 +40,20 @@ bool game_running = true;
 
 int main()
 {
-    while(game_running==true){
-        system("clear");
-        for(int display=0; display<6; ++display){
-            usleep(300000);
-            cout << canvas[display] << "  " << canvas2[display] <<  "  " << canvas3[display] << endl;
-        }
-        cin.get();
+    char run;
 
-    }
+    cout << "Press any key to see magic: ";
+    cin.get(run);
+
+
+        while(game_running==true){
+            system("clear");
+            for(int display=0; display<6; ++display){
+                usleep(300000);
+                cout << canvas[display] << "  " << canvas2[display] <<  "  " << canvas3[display] << endl;
+            }
+            cin.get();
+
+        }
+
 }
