@@ -80,7 +80,7 @@ int main(){
 
     file.close();
 
-    cout << "You can check your file in folder you placed this .cpp file" << endl;
+    cout << "You can access your file in folder you placed this 'vehicle_storage.cpp' file" << endl;
 
 }
 
