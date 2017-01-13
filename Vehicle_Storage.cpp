@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include <fstream>                                          ///To store information
+#include <fstream>                                          //To store information
 
 using namespace std;
 
@@ -9,13 +9,13 @@ int main(){
 
     ofstream file;
 
-    file.open("vehInfo.txt");                               ///Making file named as vehInfo.txt
+    file.open("vehInfo.txt");                               //Making file named as vehInfo.txt
 
     cout << "Press enter to continue!!!\n";
 
     getchar();
 
-    system("clear");                                        ///For Linux to clear console screen
+    system("clear");                                        //For Linux to clear console screen
 
     cout << "===============================================================================" << endl;
     cout << "                     PROGRAM TO STORE INFORMATIONS OF CARS" << endl;
@@ -36,9 +36,6 @@ int main(){
     cin.tie(NULL);
 
     int n=0,j;
-
-   /// cout << "Press enter to continue!!!\n";
-
 
     while(n<storeNo){
 
