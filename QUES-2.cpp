@@ -1,6 +1,5 @@
-#include <iostream>
-
-using namespace std;
+#include <iostream.h>
+#include <conio.h>
 
 int choice;
 
@@ -53,7 +52,9 @@ void prime(int low, int high){
     cin >> ch;
 
     if(ch=='Y' || ch == 'y'){
-        menu();
+        goto start;
+    }else{
+        exit(0);
     }
 }
 
@@ -91,7 +92,7 @@ void krishnamurty(int num, int ending){
     cin >> ch;
 
     if(ch=='Y' || ch == 'y'){
-        menu();
+        goto start;;
     }else{
         exit(0);
     }
@@ -132,7 +133,7 @@ void armstrong(int num, int ending){
     cin >> ch;
 
     if(ch=='Y' || ch == 'y'){
-        menu();
+        goto start;
     }else{
         exit(0);
     }
@@ -167,7 +168,7 @@ void palindrome(int start, int ending){
     cin >> ch;
 
     if(ch=='Y' || ch == 'y'){
-        menu();
+        goto start;
     }else{
         exit(0);
     }
@@ -177,6 +178,10 @@ void palindrome(int start, int ending){
 
 int main()
 {
+ clrscr();       
+        
+  start:
+        
     menu();
 
     int start, ending;
@@ -186,22 +191,26 @@ int main()
 
         switch(choice){
             case 1:
-                    system("clear");
+                    ///system("clear");
+                    clrscr();
                     cout << "All Prime numbers are: " << endl;
                     prime(start, ending);
                     break;
             case 2:
-                    system("clear");
+                    ///system("clear");
+                    clrscr();
                     cout << "All Krishnamurty numbers are: " << endl;
                     krishnamurty(start, ending);
                     break;
             case 3:
-                    system("clear");
+                    ///system("clear");
+                    clrscr();
                     cout << "All Aremstrong numbers are: " << endl;
                     armstrong(start, ending);
                     break;
             case 4:
-                    system("clear");
+                    ///system("clear");
+                    clrscr();
                     cout << "All Palindrome numbers are: " << endl;
                     palindrome(start, ending);
                     break;
@@ -211,4 +220,6 @@ int main()
         }
 
     return 0;
+        
+  getch();
 }
