@@ -1,8 +1,6 @@
-#include <iostream>
+#include <iostream.h>
 #include <stdio.h>
 #include <string.h>
-
-using namespace std;
 
 struct Emp{
     int empID;
@@ -82,8 +80,11 @@ void decor(){
 
 int main()
 {
+  clrscr();
+    
     decor();
     input();
 
     return 0;
+  getch();
 }
