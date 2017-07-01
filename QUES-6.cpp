@@ -1,5 +1,5 @@
-#include <iostream>
-//#include <conio>
+#include <iostream.h>
+#include <conio.h>
 
 using namespace std;
 
@@ -131,8 +131,8 @@ void bank::display(){
 }
 void menu(){
 
-        system("clear");
-///    clrscr();
+       /// system("clear");
+        clrscr();
 
         cout << "------------------------------------------------------" << endl;
         cout << "|               WELCOME TO GENERAL BANK              |" << endl;
@@ -197,7 +197,11 @@ void WhatToDo(){
 
 int main()
 {
+  clrscr();  
+    
     menu();
 
     return 0;
+ 
+  getch();  
 }
