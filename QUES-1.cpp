@@ -1,5 +1,5 @@
-#include <iostream>
-using namespace std;
+#include <iostream.h>
+#include <conio.h>      ///for turboc++. That's for MY Friends lol
 
 void algo(int &start, int &ending){
 
@@ -50,6 +50,8 @@ void algo(int &start, int &ending){
 
 int main()
 {
+  clrscr();  
+    
     int start, ending;
 
     cout << "################################################################" << endl;
@@ -62,4 +64,6 @@ int main()
     algo(start, ending);
 
     return 0;
+    
+  getch();
 }
