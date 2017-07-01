@@ -1,8 +1,8 @@
 #include <iostream>
+//#include <conio>
 
 using namespace std;
 
-void menu();
 int choice;
 
 class bank{
@@ -29,6 +29,11 @@ class bank{
      void display();        ///to display all details of account holder;
      void input();         ///to take input of all necessary details
 };
+
+void menu();
+void WhatToDo();
+int amt;
+bank mem1;
 
 void bank::input(){
 
@@ -58,6 +63,9 @@ void bank::deposit (int amt){
 
     if(ch=='Y'||ch=='y'){
         menu();
+
+    }else{
+        exit(0);
     }
 }
 
@@ -70,6 +78,9 @@ void bank::withdrawal(int amt){
 
     if(ch=='Y'||ch=='y'){
         menu();
+
+    }else{
+        exit(0);
     }
 }
 
@@ -85,6 +96,9 @@ void bank::balance(){
 
     if(ch=='Y'||ch=='y'){
         menu();
+
+    }else{
+        exit(0);
     }
 }
 
@@ -108,12 +122,17 @@ void bank::display(){
     cin >> ch;
 
     if(ch=='Y'||ch=='y'){
+
         menu();
+
+    }else{
+        exit(0);
     }
 }
 void menu(){
 
         system("clear");
+///    clrscr();
 
         cout << "------------------------------------------------------" << endl;
         cout << "|               WELCOME TO GENERAL BANK              |" << endl;
@@ -136,18 +155,14 @@ void menu(){
         cout << endl << "ENTER YOUR CHOICE: ";
         cin >> choice;
 
+        WhatToDo();
+
 
 }
 
-int main()
-{
-    int amt;
+void WhatToDo(){
 
-    bank mem1;
-
-    menu();
-
-    switch(choice){
+        switch(choice){
         case 1:
                 cout << "\nEnter Amount to be Deposited: ";
                 cin >> amt;
@@ -177,6 +192,12 @@ int main()
                 system("clear");   ///clrscr();
                 mem1.input();
     }
+
+}
+
+int main()
+{
+    menu();
 
     return 0;
 }
