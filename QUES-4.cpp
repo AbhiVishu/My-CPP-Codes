@@ -1,6 +1,7 @@
 #include <iostream.h>
 #include <stdio.h>
 #include <string.h>
+#include <conio.h>
 
 struct Emp{
     int empID;
@@ -15,21 +16,21 @@ void grossSal(Emp emp[], int i){
 
     float gSal, HRA, DA, TA;
 
-        if(strcmp(emp[i].dept, "SALES") || strcmp(emp[i].dept, "sales")){
+	if(strcmp(emp[i].dept, "SALES") || strcmp(emp[i].dept, "sales")){
 
-            HRA = 1.2 * emp[i].salary;
-            DA = 0.3 * emp[i].salary;
-            TA = 0.2 * emp[i].salary;
+	    HRA = 1.2 * emp[i].salary;
+	    DA = 0.3 * emp[i].salary;
+	    TA = 0.2 * emp[i].salary;
 
-            gSal = HRA + DA + TA;
+	    gSal = HRA + DA + TA;
 
-           /// output(emp, gSal, i);
+	   /// output(emp, gSal, i);
 
-           cout << "\nGROSS SALARY of " << emp[i].name << " is: " << gSal << endl << endl;
+	   cout << "\nGROSS SALARY of " << emp[i].name << " is: " << gSal << endl << endl;
 
-        }else{
-            cout << "SERVER FAILURE" << endl;
-        }
+	}else{
+	    cout << "SERVER FAILURE" << endl;
+	}
 
 }
 
@@ -41,19 +42,19 @@ void input(){
 
     while(i<5){
 
-        cout << "Enter employee ID: ";
-        cin >> emp[i].empID;
+	cout << "Enter employee ID: ";
+	cin >> emp[i].empID;
 
-        cout << "Enter employee Name: ";
-        gets(emp[i].name);
+	cout << "Enter employee Name: ";
+	gets(emp[i].name);
 
-        cout << "Enter employee basic salary: ";
-        cin >> emp[i].salary;
+	cout << "Enter employee basic salary: ";
+	cin >> emp[i].salary;
 
-        cout << "Enter employee department: ";
-        gets(emp[i].dept);
+	cout << "Enter employee department: ";
+	gets(emp[i].dept);
 
-        grossSal(emp, i);
+	grossSal(emp, i);
 
       ++i;
     }
@@ -81,10 +82,10 @@ void decor(){
 int main()
 {
   clrscr();
-    
+
     decor();
     input();
 
-    return 0;
   getch();
+  return 0;
 }
