@@ -48,10 +48,10 @@ void algo(int &start, int &ending){
     }
 }
 
-int main()
+void main()
 {
-  clrscr();  
-    
+  clrscr();
+
     int start, ending;
 
     cout << "################################################################" << endl;
@@ -63,7 +63,7 @@ int main()
 
     algo(start, ending);
 
-    return 0;
+   /// return 0;
     
   getch();
 }
