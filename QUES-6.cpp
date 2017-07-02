@@ -1,7 +1,6 @@
 #include <iostream.h>
 #include <conio.h>
-
-using namespace std;
+#include <process.h>
 
 int choice;
 
@@ -201,7 +200,6 @@ int main()
     
     menu();
 
-    return 0;
- 
-  getch();  
+  getch();
+  return 0;
 }
