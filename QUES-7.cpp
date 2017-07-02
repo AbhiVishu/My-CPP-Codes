@@ -1,31 +1,30 @@
-#include <iostream>
-///#include <conio.h>
+#include <iostream.h>
+#include <conio.h>
+#include <process.h>
 #define NULL 0
-
-using namespace std;
 
 class Tour{
     int noA, noK, km;
     float TFare;
 
     public:
-        Tour(){
-            TFare = NULL;
-            noA = noK = km = 0;
-        }
+	Tour(){
+	    TFare = NULL;
+	    noA = noK = km = 0;
+	}
 
-        void assignFair();
-        void input();
-        void output();
+	void assignFair();
+	void input();
+	void output();
 };
 
 void Tour::assignFair(){
     if(km >= 1000){
-        TFare = noA*500 + noK*250;
+	TFare = noA*500 + noK*250;
     }else if(km < 1000 && km >= 500){
-        TFare = noA*300 + noK*150;
+	TFare = noA*300 + noK*150;
     }else{
-        TFare = noA*200 + noK*100;
+	TFare = noA*200 + noK*100;
     }
     output();
 }
@@ -52,7 +51,8 @@ void Tour::input(){
 
 void Tour::output(){
 
-    system("clear");
+   /// system("clear");
+    clrscr();
 
     cout << "------------------------------------------------------------" << endl;
     cout << "|**********************************************************|" << endl;
@@ -73,6 +73,9 @@ void Tour::output(){
 
 int main()
 {
+  clrscr();
     Tour Ticket;
     Ticket.input();
+  getch();
+  return 0;
 }
