@@ -1,5 +1,6 @@
 #include <iostream.h>
 #include <conio.h>
+#include <process.h>
 
 void ch(int &);
 
@@ -120,6 +121,6 @@ int main()
 
     menu();
 
-  return 0;
   getch();
+  return 0;
 }
