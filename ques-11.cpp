@@ -3,7 +3,7 @@
 
 using namespace std;
 
-///Other functions will be updated soon....
+///Please fix bugs if any DON'T THINK I'M GONNA DO IT FOR YOU GUYS...
 
 int choice;             ///Global Variable...cause i'm very Lazy :p
 int siz;
@@ -50,9 +50,34 @@ void binarySearch(int arr[], int num){
 
 void larEle(int arr[]){
 
+    int temp = 0;
+
+    for(int i=0;i<siz;i++)
+    {
+        if(arr[i]>temp)
+        temp=arr[i];
+    }
+    cout << "The biggest number is: " << temp << endl;
+
 }
 
 void sortArr(int arr[]){
+
+    for(int i=0; i<siz; i++){
+        for(int j=0; j<siz-i; ++j){
+            if(arr[j] > arr[j+1]){
+                arr[j] ^= arr[j+1];
+                arr[j+1] ^= arr[j];
+                arr[j] ^= arr[j+1];
+            }
+        }
+    }
+
+    cout << "Sorted element is: ";
+
+    for(int i=0; i<siz; ++i){
+        cout << arr[i] << ' ';
+    }
 
 }
 
