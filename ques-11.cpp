@@ -3,6 +3,8 @@
 
 using namespace std;
 
+///Other functions will be updated soon....
+
 int choice;             ///Global Variable...cause i'm very Lazy :p
 int siz;
 
