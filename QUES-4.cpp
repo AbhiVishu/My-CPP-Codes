@@ -12,11 +12,13 @@ struct Emp{
 
 void output(Emp [], float , int);
 
-void grossSal(Emp emp[], int i){
+void grossSal(Emp emp[]){
 
     float gSal, HRA, DA, TA;
+    int i=0;
+      while(i<5){
 
-	if(strcmp(emp[i].dept, "SALES") || strcmp(emp[i].dept, "sales")){
+	if(strcmpi(emp[i].dept, "SALES")==0){
 
 	    HRA = 1.2 * emp[i].salary;
 	    DA = 0.3 * emp[i].salary;
@@ -31,16 +33,19 @@ void grossSal(Emp emp[], int i){
 	}else{
 	    cout << "SERVER FAILURE" << endl;
 	}
+      ++i;
+    }
 
 }
 
 void input(){
     Emp emp[5];
     char a[5];
-
     int i=0;
 
     while(i<5){
+
+	cout << "ENTER THE SALARY OF EMPLOYEE " << i+1 << endl << endl;
 
 	cout << "Enter employee ID: ";
 	cin >> emp[i].empID;
@@ -54,11 +59,12 @@ void input(){
 	cout << "Enter employee department: ";
 	gets(emp[i].dept);
 
-	grossSal(emp, i);
+	clrscr();
 
       ++i;
     }
 
+    grossSal(emp);
 }
 
 /**void output(Emp emp[], float gSal, int i){
